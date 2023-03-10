@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Visualization</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <!-- 头部 -->
+    <header>
+        <h1>Welcome to my Channel</h1>
+        <div class="time"></div>
+
+        <!-- 时间 -->
+        <script>
+            var CNTime = null;
+            CNTime = setTimeout(time, 50);//50ms后才会有时间显示
+            function time() {
+                clearTimeout(CNTime);
+                CNdate = new Date();
+                var year = CNdate.getFullYear();
+                var month = CNdate.getMonth() + 1;
+                var day = CNdate.getDate();
+                var hours = CNdate.getHours();
+                var minutes = CNdate.getMinutes();
+                var seconds = CNdate.getSeconds();
+                document.querySelector(".time").innerHTML =
+                    "当前时间：" +
+                    year + "年" +
+                    month + "月" +
+                    day + "日" +
+                    "-" +
+                    hours + "时" +
+                    minutes + "分" +
+                    seconds + "秒";
+                CNTime = setTimeout(time, 1000);
+            }
+        </script>
+    </header>
+
+    <!-- 主体内容 -->
+    <section class="mainBox">
+        <!-- 主体左边的内容 -->
+        <div class="column">
+            <!-- 柱状图 -->
+            <div class="panel bar1">
+                <h2>柱状图-就业情况</h2>
+                <div class="chart"></div>
+                <div class="panelFoot"></div>
+            </div>
+            <!-- 折线图 -->
+            <div class="panel line1">
+                <h2>折线图-人员数量变化
+                    <a href="javascript:;">2020</a>
+                    <a href="javascript:;">2021</a>
+                </h2>
+                <div class="chart"></div>
+                <div class="panelFoot"></div>
+            </div>
+            <!-- 扇形图 -->
+            <div class="panel pie1">
+                <h2>扇形图-年龄分布</h2>
+                <div class="chart"></div>
+                <div class="panelFoot"></div>
+            </div>
+        </div>
+        <!-- 主体中间的内容 -->
+        <div class="column">
+            <!-- 人数变化部分 -->
+            <div class="member">
+                <div class="memberHead">
+                    <ul>
+                        <li>6666666666</li>
+                        <li>123456789</li>
+                    </ul>
+                </div>
+                <div class="memberBody">
+                    <ul>
+                        <li>前端需求人数</li>
+                        <li>市场供应人数</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 地图部分 -->
+            <div class="map">
+                <div class="mapEarth"></div>
+                <div class="mapLBX"></div>
+                <div class="mapJT"></div>
+                <div class="mapChart"></div>
+            </div>
+        </div>
+        <!-- 主体右边的内容 -->
+        <div class="column">
+            <!-- 柱状图 -->
+            <div class="panel bar2">
+                <h2>柱状图-就业情况</h2>
+                <div class="chart">图表</div>
+                <div class="panelFoot"></div>
+            </div>
+            <!-- 折线图 -->
+            <div class="panel line2">
+                <h2>波浪图-毕业人数</h2>
+                <div class="chart">图表</div>
+                <div class="panelFoot"></div>
+            </div>
+            <!-- 扇形图 -->
+            <div class="panel pie2">
+                <h2>XX图-XXXXX</h2>
+                <div class="chart">图表</div>
+                <div class="panelFoot"></div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/index.js"></script>
+    <script src="js/echarts.min.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/index0.js"></script>
+
+</body>
+
+</html>
